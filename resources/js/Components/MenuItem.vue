@@ -10,6 +10,7 @@ const props = defineProps({
 })
 const {iconString}  = toRefs(props)
 let icon = null;
+
 if(iconString.value==='Home') icon=Home;
 if (iconString.value === 'Explore') icon = Pound
 if (iconString.value === 'Notifications') icon = BellOutline
