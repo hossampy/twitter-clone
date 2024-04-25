@@ -41,6 +41,18 @@ const closeMessageBox = () => {
 }
 
 
+const addTweet = ()=>{
+    if(!tweet.value){
+        return
+    }
+    let data = new FormData()
+    data.append('tweet', tweet.value)
+    data.append('file', file.value)
+    router.post('/tweets', data)
+    closeMessageBox();
+}
+
+
 const textarea = ref(null);
 
 const textareaInput = (e) => {
